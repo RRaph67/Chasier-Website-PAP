@@ -49,4 +49,4 @@ Chasier-Website-PAP/
 │       ├── main_icon.png      # Logo utama NgeCafe
 │       └── avatar.png         # Gambar profil pengguna / kasir aktif
 │
-└── README.md                  # Dokumentasi proyek
+└── README.txt# Dokumentasi proyek
