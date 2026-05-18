@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NgeCafe - Profile Chasier</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="dashboard-body">
+
+    <div class="dashboard-wrapper d-flex min-vh-100">
+
+        <aside class="sidebar offcanvas-lg offcanvas-start" tabindex="-1" id="sidebarOffcanvas" aria-label="Sidebar Navigasi">
+            <div class="d-flex align-items-center justify-content-between px-3 py-4">
+                <div class="sidebar-brand d-flex align-items-center gap-2">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center"
+                        style="width: 60px; height: 60px; flex-shrink: 0;">
+                        <div class="hero-logo d-flex justify-content-center align-items-center" aria-hidden="true">
+                            <img src="../assets/images/main_icon.png" alt="" class="main_logo w-75">
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="fs-5 fw-bold text-white m-0 py-1">NgeCafe</h2>
+                        <small class="text-white-50 d-block" style="font-size: 0.7rem; line-height: 1;">Pokoknya
+                            Nyaman</small>
+                    </div>
+                </div>
+                <button type="button" class="btn-close btn-close-white d-lg-none" data-bs-dismiss="offcanvas"
+                    data-bs-target="#sidebarOffcanvas" aria-label="Close"></button>
+            </div>
+        
+            <nav class="sidebar-nav d-flex flex-column gap-1 px-2" aria-label="Menu Utama">
+                <p class="nav-section-title px-3 mt-2 mb-1">General</p>
+                <a href="./dashboard_chasier.html" class="nav-link">Dashboard <i class="bi bi-chevron-right ms-auto"></i></a>
+                <a href="./opPengguna.html" class="nav-link">Operasional <i
+                        class="bi bi-chevron-right ms-auto"></i></a>
+                <a href="./status_pesanan.html" class="nav-link">Status Pesanan <i class="bi bi-chevron-right ms-auto"></i></a>
+                <a href="./profile.html" class="nav-link active" aria-current="page">Profile <i class="bi bi-chevron-right ms-auto"></i></a>
+        
+                <p class="nav-section-title px-3 mt-4 mb-1">Akun</p>
+                <a href="login.html" class="nav-link text-danger-hover">Keluar <i class="bi bi-box-arrow-right ms-auto"></i></a>
+            </nav>
+        </aside>
+
+        <main class="main-content flex-grow-1 d-flex flex-column min-w-0">
+
+        <header
+            class="mobile-header d-flex d-lg-none align-items-center justify-content-between bg-white rounded-3 p-2 px-3 shadow-sm mt-3 mx-3 mb-2"
+            aria-label="Header Mobile">
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn btn-link p-0 text-dark" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#sidebarOffcanvas" aria-label="Buka Menu">
+                    <i class="bi bi-list fs-2"></i>
+                </button>
+                <h1 class="m-0 fs-4 fw-bold text-success-dark">NgeCafe</h1>
+            </div>
+            <a href="profile.html" aria-label="Lihat Profil">
+                <img src="../assets/images/avatar.png" alt="Profile" class="rounded-circle" width="40" height="40"
+                    style="object-fit: cover;">
+            </a>
+        </header>
+        
+        <header
+            class="desktop-topbar d-none d-lg-flex align-items-center justify-content-between bg-white rounded-3 p-2 px-4 shadow-sm mt-3 mx-4 mb-2">
+            <div class="invisible">Placeholder</div>
+            <a href="profile.html" aria-label="Lihat Profil">
+                <img src="../assets/images/avatar.png" alt="Profile" class="rounded-circle" width="40" height="40"
+                    style="object-fit: cover;">
+            </a>
+        </header>
+
+            <section class="p-3 p-lg-4 flex-grow-1 overflow-auto">
+
+                <article class="profile-header-card bg-white rounded-4 p-4 shadow-sm mb-4">
+                    <div
+                        class="d-flex flex-column flex-lg-row align-items-center gap-3 gap-lg-4 text-center text-lg-start">
+
+                        <div class="position-relative profile-avatar-wrapper">
+                            <img src="../assets/images/avatar.png" alt="Rafasya"
+                                class="profile-avatar rounded-circle border border-3 border-white shadow-sm">
+                            <button class="btn-edit-avatar btn btn-success rounded-circle position-absolute"
+                                aria-label="Edit Foto Profil" id="btnEditFoto">
+                                <i class="bi bi-pencil-fill"></i>
+                            </button>
+                            <input type="file" id="uploadFotoInput" class="d-none" accept="image/png, image/jpeg">
+                        </div>
+
+                        <div class="flex-grow-1">
+                            <div class="d-flex flex-column flex-lg-row align-items-center gap-2 mb-1">
+                                <h2 class="fs-4 fw-bold m-0 text-dark">Rafasya</h2>
+                                <span
+                                    class="role-badge bg-success-light text-success-dark px-3 py-1 rounded-pill fw-semibold"
+                                    style="font-size: 0.85rem;">Chasier</span>
+                            </div>
+                            <p class="text-muted mb-0 d-none d-lg-block">rafasyashandyka@example.com</p>
+                            <p class="text-muted mb-0 d-none d-lg-block" style="font-size: 0.85rem;">Member sejak
+                                Januari 2022</p>
+                        </div>
+
+                        <div class="d-none d-lg-flex gap-2">
+                            <button class="btn btn-outline-secondary rounded-3 px-4">Lihat Profil Publik</button>
+                            <button class="btn btn-primary-green rounded-3 px-4 m-0" style="width: auto;">Edit
+                                Profil</button>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="row g-4">
+                    <div class="col-12 col-lg-6 d-flex flex-column gap-4">
+                        <section aria-labelledby="storeSettingsTitle">
+                            <h3 id="storeSettingsTitle" class="fs-6 fw-bold text-muted text-uppercase mb-3 d-lg-none">
+                                Store Settings</h3>
+
+                            <div class="settings-card bg-white rounded-4 shadow-sm overflow-hidden">
+                                <div
+                                    class="d-none d-lg-flex justify-content-between align-items-center p-3 border-bottom bg-light">
+                                    <span class="fw-semibold text-dark">Informasi Toko</span>
+                                    <i class="bi bi-shop text-muted"></i>
+                                </div>
+
+                                <ul class="list-unstyled m-0">
+                                    <li class="setting-item p-3 border-bottom d-flex align-items-center gap-3 cursor-pointer"
+                                        onclick="handleSettingClick('Store Info')">
+                                        <div class="setting-icon bg-light rounded-3 d-flex align-items-center justify-content-center"
+                                            style="width: 40px; height: 40px;">
+                                            <i class="bi bi-shop fs-5 text-dark"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h4 class="fs-6 fw-semibold m-0 text-dark">Store Info / Detail Toko</h4>
+                                            <p class="text-muted m-0" style="font-size: 0.8rem;">Details about your
+                                                location</p>
+                                        </div>
+                                        <i class="bi bi-chevron-right text-muted"></i>
+                                    </li>
+
+                                    <li class="setting-item p-3 border-bottom d-flex align-items-center gap-3 cursor-pointer"
+                                        onclick="handleSettingClick('Payment Methods')">
+                                        <div class="setting-icon bg-light rounded-3 d-flex align-items-center justify-content-center"
+                                            style="width: 40px; height: 40px;">
+                                            <i class="bi bi-cash-stack fs-5 text-dark"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h4 class="fs-6 fw-semibold m-0 text-dark">Payment Methods</h4>
+                                            <p class="text-muted m-0" style="font-size: 0.8rem;">Manage cash and card
+                                                options</p>
+                                        </div>
+                                        <i class="bi bi-chevron-right text-muted"></i>
+                                    </li>
+
+                                    <li class="setting-item p-3 d-none d-lg-flex align-items-center gap-3 cursor-pointer"
+                                        onclick="handleSettingClick('Kustomisasi Struk')">
+                                        <div class="setting-icon bg-light rounded-3 d-flex align-items-center justify-content-center"
+                                            style="width: 40px; height: 40px;">
+                                            <i class="bi bi-receipt fs-5 text-dark"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h4 class="fs-6 fw-semibold m-0 text-dark">Kustomisasi Struk</h4>
+                                            <p class="text-muted m-0" style="font-size: 0.8rem;">Logo, footer, dan
+                                                format nomor invoice</p>
+                                        </div>
+                                        <i class="bi bi-chevron-right text-muted"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <button
+                            class="btn btn-logout-dashed w-100 p-3 rounded-4 fw-semibold d-none d-lg-flex justify-content-center align-items-center gap-2"
+                            id="btnLogoutDesktop">
+                            <i class="bi bi-box-arrow-right fs-5"></i> Keluar dari Akun
+                        </button>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <section aria-labelledby="accountSafetyTitle">
+                            <h3 id="accountSafetyTitle" class="fs-6 fw-bold text-muted text-uppercase mb-3 d-lg-none">
+                                Account & Safety</h3>
+
+                            <div class="settings-card bg-white rounded-4 shadow-sm overflow-hidden">
+                                <div
+                                    class="d-none d-lg-flex justify-content-between align-items-center p-3 border-bottom bg-light">
+                                    <span class="fw-semibold text-dark">Akun dan Keamanan</span>
+                                    <i class="bi bi-shield-lock text-muted"></i>
+                                </div>
+
+                                <ul class="list-unstyled m-0">
+                                    <li class="setting-item p-3 border-bottom d-flex align-items-center gap-3 cursor-pointer"
+                                        onclick="handleSettingClick('Security')">
+                                        <div class="setting-icon bg-light rounded-3 d-flex align-items-center justify-content-center"
+                                            style="width: 40px; height: 40px;">
+                                            <i class="bi bi-shield-check fs-5 text-dark"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h4 class="fs-6 fw-semibold m-0 text-dark">Security / Keamanan</h4>
+                                            <p class="text-muted m-0" style="font-size: 0.8rem;">Password and
+                                                authentication</p>
+                                        </div>
+                                        <i class="bi bi-chevron-right text-muted"></i>
+                                    </li>
+
+                                    <li class="setting-item p-3 d-flex align-items-center gap-3 cursor-pointer"
+                                        onclick="handleSettingClick('Staff Management')">
+                                        <div class="setting-icon bg-light rounded-3 d-flex align-items-center justify-content-center"
+                                            style="width: 40px; height: 40px;">
+                                            <i class="bi bi-people fs-5 text-dark"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h4 class="fs-6 fw-semibold m-0 text-dark">Staff Management</h4>
+                                            <p class="text-muted m-0" style="font-size: 0.8rem;">Add or remove
+                                                permissions</p>
+                                        </div>
+                                        <i class="bi bi-chevron-right text-muted"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="col-12 mt-4 d-lg-none">
+                        <button
+                            class="btn btn-logout-dashed w-100 p-3 rounded-4 fw-semibold d-flex justify-content-center align-items-center gap-2"
+                            id="btnLogoutMobile">
+                            <i class="bi bi-box-arrow-right fs-5"></i> Logout
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/profile.js"></script>
+</body>
+
+</html>
